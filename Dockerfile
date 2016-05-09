@@ -18,6 +18,6 @@ ENV SET_CONTAINER_TIMEZONE false
 # Default container timezone as found under the directory /usr/share/zoneinfo/.
 ENV CONTAINER_TIMEZONE Europe/Stockholm
 # Launch Elastalert when a container is started.
-RUN plugin install com.floragunn/search-guard-ssl/2.3.1.8.1
+RUN bin/plugin install com.floragunn/search-guard-ssl/2.3.1.8.1
 
-CMD ["plugin install com.floragunn/search-guard-2/2.3.1.0-beta1"]
+CMD ["bin/plugin install com.floragunn/search-guard-2/2.3.1.0-beta1"]
