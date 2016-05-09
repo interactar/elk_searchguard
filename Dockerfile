@@ -19,5 +19,4 @@ ENV SET_CONTAINER_TIMEZONE false
 ENV CONTAINER_TIMEZONE Europe/Stockholm
 # Launch Elastalert when a container is started.
 RUN bin/plugin install com.floragunn/search-guard-ssl/2.3.1.8.1
-
-CMD ["bin/plugin install com.floragunn/search-guard-2/2.3.1.0-beta1"]
+RUN bin/plugin install com.floragunn/search-guard-2/2.3.1.0-beta1
