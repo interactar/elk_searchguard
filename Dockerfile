@@ -16,7 +16,11 @@ VOLUME /usr/share/elasticsearch/data
 # Set this environment variable to true to set timezone on container start.
 ENV SET_CONTAINER_TIMEZONE false
 # Default container timezone as found under the directory /usr/share/zoneinfo/.
-ENV CONTAINER_TIMEZONE Europe/Stockholm
-# Launch Elastalert when a container is started.
+ENV CONTAINER_TIMEZONE America/Buenos_Aires
+# Launch Elasticsearch
+RUN /usr/sbin/service elasticsearch start
+
+# Install plugins, ssl is required but we are not planning to use it.
 RUN bin/plugin install com.floragunn/search-guard-ssl/2.3.1.8.1
 RUN bin/plugin install com.floragunn/search-guard-2/2.3.1.0-beta1
+
